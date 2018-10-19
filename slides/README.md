@@ -156,8 +156,10 @@ Let’s build an Electron app!
 
 ![Slide 16](slide-16.jpeg)
 
-    const electron = require('electron')
-    const { app, BrowserWindow } = require('electron')
+````js
+const electron = require('electron')
+const { app, BrowserWindow } = require('electron')
+````
 
 > Then you require the Electron module.
 
@@ -165,21 +167,23 @@ Let’s build an Electron app!
 
 ![Slide 17](slide-17.jpeg)
 
-    function createWindow () {
-      // Create the browser window.
-      win = new BrowserWindow({ width: 800, height: 600 })
+````js
+function createWindow () {
+    // Create the browser window.
+    win = new BrowserWindow({ width: 800, height: 600 })
 
-      // and load the index.html of the app.
-      win.loadFile('boo.html')
+    // and load the index.html of the app.
+    win.loadFile('boo.html')
 
-      // Emitted when the window is closed.
-      win.on('closed', () => {
+    // Emitted when the window is closed.
+    win.on('closed', () => {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
         win = null
-      })
-    }
+    })
+}
+````
 
 > And this function, at less than 10 lines of code without comments, is all it takes to create a basic Electron app.
 
@@ -187,8 +191,10 @@ Let’s build an Electron app!
 
 ![Slide 18](slide-18.jpeg)
 
-    win = new BrowserWindow({ width: 800, height: 600 })
-    win.loadFile('boo.html')
+````js
+win = new BrowserWindow({ width: 800, height: 600 })
+win.loadFile('boo.html')
+````
 
 > So what we’re doing here is creating a new BrowserWindow instance with a width of 800 and a height of 600. Then we’re loading an HTML page called boo.html. That’s it.
 
@@ -206,7 +212,9 @@ Alt text: Window with titlebar that says "Hello Word!", containing a header tag 
 
 ![Slide 20](slide-20.jpeg)
 
-    win = new BrowserWindow({ width: 800, height: 600 })
+````js
+win = new BrowserWindow({ width: 800, height: 600 })
+````
 
 > Now, here’s where the evil comes in. You can add some pretty scary parameters into BrowserWindow…
 
@@ -214,14 +222,16 @@ Alt text: Window with titlebar that says "Hello Word!", containing a header tag 
 
 ![Slide 21](slide-21.jpeg)
 
-    win = new BrowserWindow({
-      width: 800,
-      height: 600,
-      frame: false,
-      transparent: true,
-      toolbar: false,
-      simpleFullscreen: true
-    })
+````js
+win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    frame: false,
+    transparent: true,
+    toolbar: false,
+    simpleFullscreen: true
+})
+````
 
 > …Like hiding the window frame, having a transparent background, hiding the title bar, and a full screen mode that doesn’t open in another workspace on macOS.
 
@@ -229,17 +239,19 @@ Alt text: Window with titlebar that says "Hello Word!", containing a header tag 
 
 ![Slide 22](slide-22.jpeg)
 
-    // Ignore mouse events
-    win.setIgnoreMouseEvents(true)
+````js
+// Ignore mouse events
+win.setIgnoreMouseEvents(true)
 
-    // Hide dock icon
-    app.dock.hide();
+// Hide dock icon
+app.dock.hide();
 
-    // Set always on top
-    win.setAlwaysOnTop(true, "floating");
-    win.setVisibleOnAllWorkspaces(true);
-    win.setFullScreenable(false);
-    win.setFullScreen(true)
+// Set always on top
+win.setAlwaysOnTop(true, "floating");
+win.setVisibleOnAllWorkspaces(true);
+win.setFullScreenable(false);
+win.setFullScreen(true)
+````
 
 > We can go even further! Let’s have clicks pass through it, hide the icon from the dock so no one knows it’s running, and set it so that it’s always on top and full-screen by default!
 
@@ -259,15 +271,17 @@ Alt text: A header tag that says "Hello World!" overlaid transparently directly 
 
 Use Case #1:
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head></head>
-    <body>
-      <audio autoloop loop style="display: none">
-          <source src="horse.mp3" type="audio/mpeg">
-        </audio>
-    </body>
-    </html>
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <audio autoloop loop style="display: none">
+        <source src="horse.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
+````
 
 > The first of which is playing horse noises in the background. This is literally all the code it takes.
 
@@ -277,10 +291,11 @@ Use Case #1:
 
 Use Case #1:
 
-    <audio autoloop loop style="display: none">
-        <source src="horse.mp3" type="audio/mpeg">
-      </audio>
-
+````html
+<audio autoloop loop style="display: none">
+    <source src="horse.mp3" type="audio/mpeg">
+</audio>
+````
 
 > It autoplays a file called horse.mp3 on loop, hidden on plain sight!
 
@@ -447,8 +462,11 @@ Thank You! ~
 Alt text: Sparkle emoji.
 
 Hire me:  https://melody.cool
+
 Tweet me: https://twitter.com/pixelyunicorn
+
 Splat me: SW-4207-5422-1528
+
 Patreon:  https://patreon.com/madebymelody
 
 > Thank you so much for coming out to see my BrooklynJS talk! Here’s where you can find me if you want to keep in touch.
