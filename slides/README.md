@@ -1,5 +1,7 @@
 # Spook your friends with Electron! :ghost:
 
+This file contains a compressed version of the slides with text content, alt text, and captions.
+
 You can find higher quality images of the slides and a downloadable PDF at: https://speakerdeck.com/pixely/spooking-your-friends-with-electron-brooklynjs-number-59.
 
 Follow Melody on Twitter: https://twitter.com/pixelyunicorn
