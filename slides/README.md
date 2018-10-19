@@ -307,7 +307,7 @@ Demo time!
 
 Alt text: A bunch of horses saying "neigh"
 
-> (Because I can’t embed sound into uploaded slideshows, image hearing a bunch of horses going neigh and not knowing where it’s coming from!)
+> (Because I can’t embed sound into uploaded slideshows, imagine hearing a bunch of horses going neigh and not knowing where it’s coming from!)
 
 ## Slide 27
 
