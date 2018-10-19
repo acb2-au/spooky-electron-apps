@@ -22,8 +22,8 @@ const { app, BrowserWindow } = require('electron')
     win.setFullScreen(true)
 
     // and load the index.html of the app.
-    // activate-windows.html, glitch.html, crach.html
-    win.loadFile('activate-windows.html')
+    // activate-windows.html, glitch.html, crack.html
+    win.loadFile('glitch.html')
 
     // Open the DevTools.
     // win.webContents.openDevTools()
